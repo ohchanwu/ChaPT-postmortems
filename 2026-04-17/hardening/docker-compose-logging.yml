@@ -1,0 +1,19 @@
+# Docker daemon log rotation — implemented per 2026-04-17 post-mortem action item #6.
+#
+# Caps each container's logs at 30 MB total (10 MB max-size × 3 max-file rotations),
+# preventing unbounded log growth from filling the EBS root volume — an adjacent
+# disk-fill failure mode flagged during incident review.
+#
+# Applied via YAML anchor and aliased into each service:
+#
+#   services:
+#     web:
+#       logging: *default-logging
+#     db:
+#       logging: *default-logging
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
