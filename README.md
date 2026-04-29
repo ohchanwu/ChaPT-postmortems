@@ -6,7 +6,7 @@ Written as portfolio artifacts: blameless, evidence-driven, and including the co
 
 ## Incidents
 
-- **[2026-04-17 — gp3 throughput saturation cascade](2026-04-17/2026-04-17.md)** — A single unoptimized analytics query saturated the EC2 instance's gp3 root volume, cascading into a ~3 hour outage via systemd DBus timeouts, Docker health-check failures, and stuck SSH. Recovery via fresh instance + Elastic IP reassignment; no data loss.
+- **[2026-04-17 — gp3 throughput saturation cascade](2026-04-17/2026-04-17.md)** — A set of unoptimized analytics queries saturated the EC2 instance's gp3 root volume, cascading into a ~3 hour outage via systemd DBus timeouts, Docker health-check failures, and stuck SSH. Recovery via fresh instance + Elastic IP reassignment; no data loss.
 
 ## Layout
 
