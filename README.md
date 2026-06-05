@@ -1,6 +1,6 @@
 # ChaPT post-mortems
 
-_Read this in: [한국어](README.ko.md)_
+_[한국어로 보기 🇰🇷](README.ko.md)_
 
 Post-incident reviews and hardening artifacts from the operation of [Cha Physical Therapy's](https://chaphysicaltherapy.com) booking and analytics platform — a small Go + MySQL web application I built and operate solo.
 

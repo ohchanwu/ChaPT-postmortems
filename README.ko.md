@@ -1,6 +1,6 @@
 # ChaPT 사후 분석(post-mortems)
 
-_다른 언어로 보기: [English](README.md)_
+_[Read this in English 🇬🇧](README.md)_
 
 [Cha Physical Therapy](https://chaphysicaltherapy.com)의 예약 및 분석 플랫폼 — 제가 혼자 만들고 운영하는 소규모 Go + MySQL 웹 애플리케이션 — 운영 과정에서 작성한 사후 검토 및 하드닝 산출물 모음입니다.
 
