@@ -1,19 +1,22 @@
 # ChaPT post-mortems
 
+_Read this in: [한국어](README.ko.md)_
+
 Post-incident reviews and hardening artifacts from the operation of [Cha Physical Therapy's](https://chaphysicaltherapy.com) booking and analytics platform — a small Go + MySQL web application I built and operate solo.
 
 Written as portfolio artifacts: blameless, evidence-driven, and including the configs that closed the loop on each incident's action items.
 
 ## Incidents
 
-- **[2026-04-17 — gp3 throughput saturation cascade](2026-04-17/2026-04-17.md)** — A set of unoptimized analytics queries saturated the EC2 instance's gp3 root volume, cascading into a ~3 hour outage via systemd DBus timeouts, Docker health-check failures, and stuck SSH. Recovery via fresh instance + Elastic IP reassignment; no data loss.
+- **[2026-04-17 — gp3 throughput saturation cascade](2026-04-17/2026-04-17.md)** ([한국어](2026-04-17/2026-04-17.ko.md)) — A set of unoptimized analytics queries saturated the EC2 instance's gp3 root volume, cascading into a ~3 hour outage via systemd DBus timeouts, Docker health-check failures, and stuck SSH. Recovery via fresh instance + Elastic IP reassignment; no data loss.
 
 ## Layout
 
 ```
 .
 └── 2026-04-17/                         # Per-incident folder
-    ├── 2026-04-17.md                   # The post-mortem
+    ├── 2026-04-17.md                   # The post-mortem (English)
+    ├── 2026-04-17.ko.md                # The post-mortem (Korean)
     ├── buffer.md                       # Raw log evidence cited in the timeline
     ├── CloudWatchGraphs/               # Inline-referenced CloudWatch screenshots
     └── hardening/                      # Action items implemented in response to this incident
